@@ -1,8 +1,111 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html,body{
-    font-family: 'Jost', sans-serif;
+html,
+body {
+  font-family: "Jost", sans-serif;
+}
+
+/* HEADER */
+header #portNav {
+  border: 2px solid black;
+  padding: 20px 0;
+}
+header .navbar-brand {
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  font-weight: bold;
+  color: rgba(63, 58, 100, 0.7);
+}
+header .navbar-brand i {
+  color: #00a63f;
+}
+header .logo_bottom {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  padding-left: 2.5rem;
+}
+
+header #navbarContent {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 200px;
+}
+header #navbarContent .navbar-nav a {
+  color: rgba(63, 58, 100, 0.7);
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0 5px 0 20px;
+}
+header #navbarContent .navbar-nav i {
+  color: rgba(63, 58, 100, 0.7);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+header #navbarContent .navbar-nav .active {
+  color: #00a63f;
+}
+header #navbarContent .button_right i.fa-search{
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #00a63f;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+header #navbarContent .button_right .btn{
+    font-size: 25px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    box-sizing: inherit;
+}
+header #navbarContent .button_right .btn:focus{
+    box-sizing: inherit;
+    box-shadow: none;
+}
+
+/* Light theme */
+#myBody {
+  background-color: white;
+}
+#switchButton {
+  background-color: white;
+}
+#switchButton .fa-sun {
+  display: none;
+}
+#switchButton .fa-moon {
+  display: block;
+}
+
+/* Dark Theme*/
+.dark#myBody {
+  background-color: black;
+}
+.dark #switchButton {
+  background-color: black;
+}
+.dark #switchButton .fa-sun {
+  display: block;
+  color: white;
+}
+
+.dark #switchButton .fa-moon {
+  display: none;
+}
+#myBody.dark .darktheme {
+  background-color: black;
+  color: white;
+}
+#myBody.dark .darktheme_gray{
+    color: rgb(180, 180, 180);
+}
+#myBody.dark #navbarContent .dropdown-menu{
+    border: 0.2px solid rgb(180, 180, 180);
+    background-color: black;
 }

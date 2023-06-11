@@ -20,47 +20,67 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
+
   <!-- Team CSS -->
   <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body id="myBody">
+  <!-- HEADER -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="portNav">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+    <nav class="navbar container navbar-expand-lg" id="portNav">
+          <a class="navbar-brand" href="#">
+            <div class="logo_top darktheme">
+              <i class="fa fa-align-right"></i>
+              <span>Corp Vision</span>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-      </div>
+            <span class="logo_bottom darktheme">Vision to your Future</span>
+          </a>
+          
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active darktheme_gray" href="#">HOME<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link darktheme_gray" href="#">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link darktheme_gray" href="#">SERVIC</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link darktheme_gray" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  PAGES
+                  <i class="fa-solid fa-chevron-down darktheme_gray"></i>
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item darktheme_gray" href="#">BLOG POST</a>
+                  <a class="dropdown-item darktheme_gray" href="#">404 PAGE</a>
+                  <a class="dropdown-item darktheme_gray" href="#">LANDING PAGE</a>
+                  <a class="dropdown-item darktheme_gray" href="#">ELEMENTS PAGE</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled darktheme_gray">CONTACT</a>
+              </li>
+            </ul>
+            <!-- <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+            <div class="button_right">
+              <i class="fa fa-search icon-material-search"></i>
+              <button class="btn" id="switchButton" title="Click to switch theme">
+                <i class="far fa-moon"></i>
+                <i class="far fa-sun"></i>
+              </button>
+            </div>
+        </div>
     </nav>
   </header>
   <section class="carousel"></section>
@@ -81,6 +101,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
     crossorigin="anonymous"></script>
+
+  <!-- SCRIPT LIGHT/DARK -->
+  <script src="./JS/script.js"></script>
 </body>
 
 </html>
