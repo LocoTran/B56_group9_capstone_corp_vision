@@ -24,6 +24,9 @@ body {
 }
 #switchButton .fa-moon {
   display: block;
+  position: fixed;
+  top: 4vh;
+  right: 12.5vw;
 }
 
 /* Dark Theme*/
@@ -38,6 +41,9 @@ body {
 }
 .dark #switchButton .fa-sun {
   display: block;
+  position: fixed;
+  top: 4vh;
+  right: 12.5vw;
 }
 .dark #switchButton .fa-moon {
   display: none;
@@ -108,19 +114,32 @@ header #navbarContent .button_right .btn:focus {
   box-shadow: none;
 }
 header #navbarContent .button_right i.fa-search {
-  width: 45px;
-  height: 45px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   background-color: #00a63f;
-  line-height: 45px;
+  line-height: 46px;
   text-align: center;
+  align-items: center;
   cursor: pointer;
   color: white;
-  position: absolute;
-  top: 50%;
-  right: 1%;
+  position: fixed;
+  top: 5.5vh;
+  right: 13.5vw;
   transform: translate(-50%,-50%);
+  z-index: 999;
+  overflow: hidden;
 }
+.zoomed {
+  animation: zoom-out 0.5s ease-in-out;
+  opacity: 0;
+}
+.normal{
+  animation: zoom-in 0.5s ease-in-out;
+}
+
+
+
 
 header #navbarContent .button_right .full_search {
   display: none;
@@ -129,7 +148,7 @@ header #navbarContent .button_right .full_search {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(0,159,77);
+  background-color: #00a63f;
   z-index: 2;
 }
 header #navbarContent .button_right .full_search i{
@@ -163,8 +182,27 @@ header #navbarContent .button_right .full_search input.input-search::placeholder
 
 .carousel div {
   height: 80vh;
-  background-color: white;
+  background-color: yellow;
 }
 
 
 
+@keyframes zoom-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    transform: scale(10);
+  }
+}
+@keyframes zoom-in {
+  0% {
+    opacity: 1;
+    transform: scale(10);
+  }
+  100% {
+    transform: scale(1);
+    transform: translate(-23px,-23px);
+  }
+}

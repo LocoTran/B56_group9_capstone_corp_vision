@@ -17,7 +17,7 @@ document.getElementById("switchButton").onclick = function () {
   };
   
 
-
+// Full search open close
   document.querySelector('.icon-material-search').addEventListener('click', function() {
     document.querySelector('.full_search').style.display = 'block';
   });
@@ -27,6 +27,7 @@ document.getElementById("switchButton").onclick = function () {
   });
 
 
+  // Open close search
 document.getElementById("open_search").addEventListener("click", function () {
   var container = document.getElementById("portNav");
   if (container.classList.contains("container")) {
@@ -41,4 +42,23 @@ document.getElementById("close_search").addEventListener("click", function () {
     container.classList.remove("container-fluid");
     container.classList.add("container");
   }
+});
+
+
+
+
+const zoomButton = document.querySelector('.fa-search');
+
+zoomButton.addEventListener('click', () => {
+    zoomButton.classList.add('zoomed');
+    zoomButton.classList.remove('normal');
+});
+
+const outButton = document.querySelector('.fa-close');
+
+outButton.addEventListener('click', () => {
+  if (zoomButton.classList.contains('zoomed')) {
+    zoomButton.classList.remove('zoomed');
+    zoomButton.classList.add('normal');
+  } 
 });
