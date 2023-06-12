@@ -7,17 +7,67 @@ html,
 body {
   font-family: "Jost", sans-serif;
 }
+#switchButton{
+  transition: all 0.5s;
+}
+/* Light theme */
+#myBody {
+  background-color: white;
+  transition: all 0.5s;
+}
+#switchButton {
+  background-color: white;
+  color: black;
+}
+#switchButton .fa-sun {
+  display: none;
+}
+#switchButton .fa-moon {
+  display: block;
+}
+
+/* Dark Theme*/
+.dark#myBody {
+  background-color: rgb(21, 20, 33);
+  color: white;
+  transition: all 0.5s;
+}
+.dark #switchButton {
+  background-color: rgb(21, 20, 33);
+  color: white;
+}
+.dark #switchButton .fa-sun {
+  display: block;
+}
+.dark #switchButton .fa-moon {
+  display: none;
+}
+#myBody.dark .darktheme {
+  color: white;
+  transition: all 0.5s;
+}
+#myBody.dark .darktheme_gray {
+  color: rgb(180, 180, 180);
+  transition: all 0.5s;
+}
+#myBody.dark #navbarContent .dropdown-menu {
+  border: 0.2px solid rgb(180, 180, 180);
+  background-color: black;
+}
 
 /* HEADER */
-header #portNav {
-  border: 2px solid black;
-  padding: 20px 0;
+header {
+  border-bottom: 1px solid rgb(180, 180, 180);
+  position: relative;
 }
-header .navbar-brand {
+header #portNav {
+  padding: 15px 0;
+}
+header #portNav .navbar-brand {
   font-size: 1.7rem;
   line-height: 1.7rem;
   font-weight: bold;
-  color: rgba(63, 58, 100, 0.7);
+  color: rgba(63, 58, 100, 0.9);
 }
 header .navbar-brand i {
   color: #00a63f;
@@ -48,7 +98,16 @@ header #navbarContent .navbar-nav i {
 header #navbarContent .navbar-nav .active {
   color: #00a63f;
 }
-header #navbarContent .button_right i.fa-search{
+
+header #navbarContent .button_right .btn {
+  font-size: 25px;
+  padding: 0;
+  box-sizing: inherit;
+}
+header #navbarContent .button_right .btn:focus {
+  box-shadow: none;
+}
+header #navbarContent .button_right i.fa-search {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -57,55 +116,55 @@ header #navbarContent .button_right i.fa-search{
   text-align: center;
   cursor: pointer;
   color: white;
-}
-header #navbarContent .button_right .btn{
-    font-size: 25px;
-    margin: 0 0 0 10px;
-    padding: 0;
-    box-sizing: inherit;
-}
-header #navbarContent .button_right .btn:focus{
-    box-sizing: inherit;
-    box-shadow: none;
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translate(-50%,-50%);
 }
 
-/* Light theme */
-#myBody {
+header #navbarContent .button_right .full_search {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0,159,77);
+  z-index: 2;
+}
+header #navbarContent .button_right .full_search i{
+  z-index: 3;
+  color: white;
+  position: absolute;
+  top: 70px;
+  right: 220px;
+  font-size: 80px;
+  cursor: pointer;
+}
+header #navbarContent .button_right .full_search input.input-search{
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 54px;
+  outline:0;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+header #navbarContent .button_right .full_search input.input-search::placeholder{
+  color: white;
+  font-weight: 300;
+}
+
+
+
+
+.carousel div {
+  height: 80vh;
   background-color: white;
 }
-#switchButton {
-  background-color: white;
-}
-#switchButton .fa-sun {
-  display: none;
-}
-#switchButton .fa-moon {
-  display: block;
-}
 
-/* Dark Theme*/
-.dark#myBody {
-  background-color: black;
-}
-.dark #switchButton {
-  background-color: black;
-}
-.dark #switchButton .fa-sun {
-  display: block;
-  color: white;
-}
 
-.dark #switchButton .fa-moon {
-  display: none;
-}
-#myBody.dark .darktheme {
-  background-color: black;
-  color: white;
-}
-#myBody.dark .darktheme_gray{
-    color: rgb(180, 180, 180);
-}
-#myBody.dark #navbarContent .dropdown-menu{
-    border: 0.2px solid rgb(180, 180, 180);
-    background-color: black;
-}
+

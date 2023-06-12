@@ -16,3 +16,29 @@ document.getElementById("switchButton").onclick = function () {
     document.getElementById("myBody").classList.toggle("dark");
   };
   
+
+
+  document.querySelector('.icon-material-search').addEventListener('click', function() {
+    document.querySelector('.full_search').style.display = 'block';
+  });
+
+  document.querySelector('.icon-close').addEventListener('click', function() {
+    document.querySelector('.full_search').style.display = 'none';
+  });
+
+
+document.getElementById("open_search").addEventListener("click", function () {
+  var container = document.getElementById("portNav");
+  if (container.classList.contains("container")) {
+    container.classList.remove("container");
+    container.classList.add("container-fluid");
+  }
+});
+
+document.getElementById("close_search").addEventListener("click", function () {
+  var container = document.getElementById("portNav");
+  if (container.classList.contains("container-fluid")) {
+    container.classList.remove("container-fluid");
+    container.classList.add("container");
+  }
+});
