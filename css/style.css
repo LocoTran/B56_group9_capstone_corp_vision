@@ -150,6 +150,7 @@ header #navbarContent .button_right .full_search {
   width: 100vw;
   background-color: #00a63f;
   z-index: 2;
+  overflow: hidden;
 }
 header #navbarContent .button_right .full_search i{
   z-index: 3;
