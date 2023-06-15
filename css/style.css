@@ -7,6 +7,142 @@ html,
 body {
   font-family: "Jost", sans-serif;
 }
+
+
+/* HEADER */
+header {
+  border-bottom: 1px solid rgb(180, 180, 180);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  z-index: 9999;
+}
+header #portNav {
+  padding: 15px 0;
+}
+header #portNav .navbar-brand {
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  font-weight: bold;
+  color: rgba(63, 58, 100, 0.9);
+}
+header .navbar-brand i {
+  color: #00a63f;
+}
+header .logo_bottom {
+  display: block;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  padding-left: 2.5rem;
+}
+
+header #navbarContent {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 200px;
+}
+header #navbarContent .navbar-nav a {
+  color: rgba(63, 58, 100, 0.7);
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0 5px 0 20px;
+}
+header #navbarContent .navbar-nav i {
+  color: rgba(63, 58, 100, 0.7);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+header #navbarContent .navbar-nav .active {
+  color: #00a63f;
+}
+
+header #navbarContent .btn {
+  font-size: 25px;
+  padding: 0;
+  box-sizing: inherit;
+}
+header #navbarContent .btn:focus {
+  box-shadow: none;
+}
+header #navbarContent i.fa-search {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #00a63f;
+  line-height: 46px;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  position: fixed;
+  top: 5.5vh;
+  right: 13.5vw;
+  transform: translate(-50%,-50%);
+  z-index: 99;
+  overflow: hidden;
+}
+.zoomed {
+  animation: zoom-out 0.5s;
+  opacity: 0;
+}
+.normal{
+  animation: zoom-in 0.5s;
+}
+
+header #navbarContent .full_search {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: blue;
+  z-index: 2;
+  overflow: hidden;
+}
+header #navbarContent .full_search .overplay_full{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #00a63f;
+  position: absolute;
+  top: 5.5vh;
+  right: 13.5vw;
+  transform: translate(-23px,-23px) scale(8);
+  animation: zoomfull 0.5s forwards;
+  transition: all 0.5s;
+}
+
+header #navbarContent .full_search .fa-close{
+  z-index: 999;
+  color: white;
+  position: absolute;
+  top: 70px;
+  right: 220px;
+  font-size: 80px;
+  cursor: pointer;
+  animation: rotateX 0.5s;
+  transition: all 0.5s;
+}
+header #navbarContent .full_search input.input-search{
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 54px;
+  outline:0;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+header #navbarContent .full_search input.input-search::placeholder{
+  color: white;
+  font-weight: 300;
+}
+
+/* LIGHT/ DARK BUTTON */
 #switchButton{
   transition: all 0.5s;
 }
@@ -60,127 +196,10 @@ body {
   border: 0.2px solid rgb(180, 180, 180);
   background-color: black;
 }
-
-/* HEADER */
-header {
-  border-bottom: 1px solid rgb(180, 180, 180);
-  position: relative;
-}
-header #portNav {
-  padding: 15px 0;
-}
-header #portNav .navbar-brand {
-  font-size: 1.7rem;
-  line-height: 1.7rem;
-  font-weight: bold;
-  color: rgba(63, 58, 100, 0.9);
-}
-header .navbar-brand i {
-  color: #00a63f;
-}
-header .logo_bottom {
-  display: block;
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  padding-left: 2.5rem;
-}
-
-header #navbarContent {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 200px;
-}
-header #navbarContent .navbar-nav a {
-  color: rgba(63, 58, 100, 0.7);
-  font-weight: bold;
-  font-size: 0.9rem;
-  padding: 0 5px 0 20px;
-}
-header #navbarContent .navbar-nav i {
-  color: rgba(63, 58, 100, 0.7);
-  font-size: 0.8rem;
-  font-weight: bold;
-}
-header #navbarContent .navbar-nav .active {
-  color: #00a63f;
-}
-
-header #navbarContent .button_right .btn {
-  font-size: 25px;
-  padding: 0;
-  box-sizing: inherit;
-}
-header #navbarContent .button_right .btn:focus {
-  box-shadow: none;
-}
-header #navbarContent .button_right i.fa-search {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background-color: #00a63f;
-  line-height: 46px;
-  text-align: center;
-  align-items: center;
-  cursor: pointer;
-  color: white;
-  position: fixed;
-  top: 5.5vh;
-  right: 13.5vw;
-  transform: translate(-50%,-50%);
-  z-index: 999;
-  overflow: hidden;
-}
-.zoomed {
-  animation: zoom-out 0.5s ease-in-out;
-  opacity: 0;
-}
-.normal{
-  animation: zoom-in 0.5s ease-in-out;
-}
+    /* Caution khi ko thể áp màu nên thêm trực tiếp thẻ   darkthem   nếu cần chuyển chữ màu trắng và    darktheme_gray   nếu cần chuyển màu xám*/
 
 
-
-
-header #navbarContent .button_right .full_search {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: #00a63f;
-  z-index: 2;
-  overflow: hidden;
-}
-header #navbarContent .button_right .full_search i{
-  z-index: 3;
-  color: white;
-  position: absolute;
-  top: 70px;
-  right: 220px;
-  font-size: 80px;
-  cursor: pointer;
-}
-header #navbarContent .button_right .full_search input.input-search{
-  background-color: transparent;
-  color: white;
-  border: none;
-  font-size: 54px;
-  outline:0;
-  width: 60%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
-header #navbarContent .button_right .full_search input.input-search::placeholder{
-  color: white;
-  font-weight: 300;
-}
-
-
-
-
+/* CAROUSEL */
 .carousel div {
   height: 80vh;
   background-color: yellow;
@@ -194,16 +213,28 @@ header #navbarContent .button_right .full_search input.input-search::placeholder
   }
   100% {
     visibility: hidden;
-    transform: scale(10);
+    transform: scale(24);
   }
 }
 @keyframes zoom-in {
   0% {
     opacity: 1;
-    transform: scale(10);
+    transform: scale(48);
   }
   100% {
-    transform: scale(1);
-    transform: translate(-23px,-23px);
+    transform: translate(-23px,-23px) scale(1);
   }
+}
+
+@keyframes zoomfull {
+  100%{
+    transform: scale(96);
+  }
+}
+
+@keyframes rotateX {
+  100%{
+    transform: rotate(-90deg);
+  }
+  
 }
