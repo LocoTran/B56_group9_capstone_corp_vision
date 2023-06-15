@@ -8,7 +8,58 @@ body {
   font-family: "Jost", sans-serif;
 }
 
-
+/* button light/dark */
+#switchButton {
+    font-size: 25px;
+    color: black;
+    transition: all 0.5s;
+    height: 46px;
+    position: fixed;
+    top: 27px;
+    right: 8.5%;
+  }
+  #switchButton:focus {
+    box-shadow: none;
+  }
+  /* Light theme */
+  #myBody {
+    background-color: white;
+    transition: all 0.5s;
+  }
+  #switchButton .fa-sun {
+    display: none;
+  }
+  #switchButton .fa-moon {
+    display: block;
+  }
+  /* Dark Theme*/
+  /* khi ko thể áp màu chữ nên thêm trực tiếp thẻ   darkthem   nếu cần chuyển chữ màu trắng và    darktheme_gray   nếu cần chuyển màu xám*/
+  .dark#myBody {
+    background-color: rgb(21, 20, 33);
+    color: white;
+    transition: all 0.5s;
+  }
+  .dark #switchButton {
+    color: white;
+  }
+  .dark #switchButton .fa-sun {
+    display: block;
+  }
+  .dark #switchButton .fa-moon {
+    display: none;
+  }
+  #myBody.dark .darktheme {
+      color: white;
+    }
+    #myBody.dark .darktheme_gray {
+      color: rgb(180, 180, 180);
+      transition: all 0.5s;
+    }
+    #myBody.dark #navbarScroll .dropdown-menu {
+      border: 0.2px solid rgb(180, 180, 180);
+      background-color: black;
+    }
+  
 /* HEADER */
 header {
   border-bottom: 1px solid rgb(180, 180, 180);
@@ -16,203 +67,125 @@ header {
   top: 0;
   right: 0;
   width: 100vw;
-  z-index: 9999;
+  height: 100px;
+  z-index: 9;
 }
 header #portNav {
-  padding: 15px 0;
+  height: 100%;
+  margin: auto;
 }
 header #portNav .navbar-brand {
   font-size: 1.7rem;
   line-height: 1.7rem;
   font-weight: bold;
   color: rgba(63, 58, 100, 0.9);
+  /* margin: 0 200px 0 0; */
 }
-header .navbar-brand i {
+header #portNav .navbar-brand i {
   color: #00a63f;
 }
-header .logo_bottom {
-  display: block;
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  padding-left: 2.5rem;
-}
-
-header #navbarContent {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 200px;
-}
-header #navbarContent .navbar-nav a {
+header #navbarScroll .navbar-nav a {
   color: rgba(63, 58, 100, 0.7);
   font-weight: bold;
   font-size: 0.9rem;
   padding: 0 5px 0 20px;
 }
-header #navbarContent .navbar-nav i {
+header #navbarScroll .navbar-nav i {
   color: rgba(63, 58, 100, 0.7);
   font-size: 0.8rem;
   font-weight: bold;
 }
-header #navbarContent .navbar-nav .active {
+header #navbarScroll .navbar-nav .active a {
   color: #00a63f;
 }
-
-header #navbarContent .btn {
-  font-size: 25px;
-  padding: 0;
-  box-sizing: inherit;
-}
-header #navbarContent .btn:focus {
-  box-shadow: none;
-}
-header #navbarContent i.fa-search {
+/* Nút search */
+header #navbarScroll i.fa-search {
   width: 46px;
   height: 46px;
   border-radius: 50%;
   background-color: #00a63f;
   line-height: 46px;
   text-align: center;
-  align-items: center;
   cursor: pointer;
   color: white;
   position: fixed;
-  top: 5.5vh;
-  right: 13.5vw;
-  transform: translate(-50%,-50%);
-  z-index: 99;
-  overflow: hidden;
+  top: 27px;
+  right: 12%;
+  z-index: 999;
 }
+
 .zoomed {
   animation: zoom-out 0.5s;
   opacity: 0;
 }
-.normal{
+.normal {
   animation: zoom-in 0.5s;
 }
 
-header #navbarContent .full_search {
+/* Full search */
+.full_search {
   display: none;
   position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: blue;
   z-index: 2;
   overflow: hidden;
+  z-index: 99;
 }
-header #navbarContent .full_search .overplay_full{
+.full_search .overplay_full {
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  background-color: #00a63f;
+  none;
   position: absolute;
-  top: 5.5vh;
-  right: 13.5vw;
-  transform: translate(-23px,-23px) scale(8);
+  top: 27px;
+  right: 12%;
   animation: zoomfull 0.5s forwards;
   transition: all 0.5s;
+  z-index: 2;
 }
-
-header #navbarContent .full_search .fa-close{
-  z-index: 999;
+.full_search .fa-close {
   color: white;
   position: absolute;
   top: 70px;
-  right: 220px;
+  right: 12%;
+  z-index: 9;
   font-size: 80px;
   cursor: pointer;
   animation: rotateX 0.5s;
   transition: all 0.5s;
 }
-header #navbarContent .full_search input.input-search{
+
+.full_search input.input-search {
   background-color: transparent;
   color: white;
   border: none;
   font-size: 54px;
-  outline:0;
+  outline: 0;
   width: 60%;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
+  z-index: 11;
 }
-header #navbarContent .full_search input.input-search::placeholder{
+.full_search input.input-search::placeholder {
   color: white;
   font-weight: 300;
 }
 
-/* LIGHT/ DARK BUTTON */
-#switchButton{
-  transition: all 0.5s;
-}
-/* Light theme */
-#myBody {
-  background-color: white;
-  transition: all 0.5s;
-}
-#switchButton {
-  background-color: white;
-  color: black;
-}
-#switchButton .fa-sun {
-  display: none;
-}
-#switchButton .fa-moon {
-  display: block;
-  position: fixed;
-  top: 4vh;
-  right: 12.5vw;
-}
-
-/* Dark Theme*/
-.dark#myBody {
-  background-color: rgb(21, 20, 33);
-  color: white;
-  transition: all 0.5s;
-}
-.dark #switchButton {
-  background-color: rgb(21, 20, 33);
-  color: white;
-}
-.dark #switchButton .fa-sun {
-  display: block;
-  position: fixed;
-  top: 4vh;
-  right: 12.5vw;
-}
-.dark #switchButton .fa-moon {
-  display: none;
-}
-#myBody.dark .darktheme {
-  color: white;
-  transition: all 0.5s;
-}
-#myBody.dark .darktheme_gray {
-  color: rgb(180, 180, 180);
-  transition: all 0.5s;
-}
-#myBody.dark #navbarContent .dropdown-menu {
-  border: 0.2px solid rgb(180, 180, 180);
-  background-color: black;
-}
-    /* Caution khi ko thể áp màu nên thêm trực tiếp thẻ   darkthem   nếu cần chuyển chữ màu trắng và    darktheme_gray   nếu cần chuyển màu xám*/
-
-
-/* CAROUSEL */
-.carousel div {
-  height: 80vh;
-  background-color: yellow;
-}
 
 
 
+/* Keyframe Search Button */
 @keyframes zoom-out {
   0% {
     opacity: 1;
   }
   100% {
-    visibility: hidden;
+    opacity: 0;
     transform: scale(24);
   }
 }
@@ -222,19 +195,28 @@ header #navbarContent .full_search input.input-search::placeholder{
     transform: scale(48);
   }
   100% {
-    transform: translate(-23px,-23px) scale(1);
+    transform: scale(1);
   }
 }
 
+.carousel{
+    background-color: bisque;
+    height: 70vh;
+}
+
+/* Keyframe search full */
 @keyframes zoomfull {
-  100%{
+50%{
+    
+        background-color: #00a63f;
+    }
+    100%{
+    background-color: #00a63f;
     transform: scale(96);
+    }
   }
-}
-
-@keyframes rotateX {
-  100%{
-    transform: rotate(-90deg);
+  @keyframes rotateX {
+    100%{
+      transform: rotate(-90deg);
+    }
   }
-  
-}
