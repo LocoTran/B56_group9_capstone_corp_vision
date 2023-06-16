@@ -8,57 +8,7 @@ body {
   font-family: "Jost", sans-serif;
 }
 
-/* button light/dark */
-#switchButton {
-    font-size: 25px;
-    color: black;
-    transition: all 0.5s;
-    height: 46px;
-    position: fixed;
-    top: 27px;
-    right: 8.5%;
-  }
-  #switchButton:focus {
-    box-shadow: none;
-  }
-  /* Light theme */
-  #myBody {
-    background-color: white;
-    transition: all 0.5s;
-  }
-  #switchButton .fa-sun {
-    display: none;
-  }
-  #switchButton .fa-moon {
-    display: block;
-  }
-  /* Dark Theme*/
-  /* khi ko thể áp màu chữ nên thêm trực tiếp thẻ   darkthem   nếu cần chuyển chữ màu trắng và    darktheme_gray   nếu cần chuyển màu xám*/
-  .dark#myBody {
-    background-color: rgb(21, 20, 33);
-    color: white;
-    transition: all 0.5s;
-  }
-  .dark #switchButton {
-    color: white;
-  }
-  .dark #switchButton .fa-sun {
-    display: block;
-  }
-  .dark #switchButton .fa-moon {
-    display: none;
-  }
-  #myBody.dark .darktheme {
-      color: white;
-    }
-    #myBody.dark .darktheme_gray {
-      color: rgb(180, 180, 180);
-      transition: all 0.5s;
-    }
-    #myBody.dark #navbarScroll .dropdown-menu {
-      border: 0.2px solid rgb(180, 180, 180);
-      background-color: black;
-    }
+
   
 /* HEADER */
 header {
@@ -69,35 +19,47 @@ header {
   width: 100vw;
   height: 100px;
   z-index: 9;
+  transition: all 0.5s;
 }
 header #portNav {
   height: 100%;
-  margin: auto;
+  /* margin: auto; */
 }
 header #portNav .navbar-brand {
-  font-size: 1.7rem;
-  line-height: 1.7rem;
+  font-size: 1.9rem;
   font-weight: bold;
-  color: rgba(63, 58, 100, 0.9);
-  /* margin: 0 200px 0 0; */
+  color: white;
+}
+header #portNav .navbar-brand .logo_bottom{
+  font-size: 0.9rem;
+  margin: -7px 0 0 40px;
 }
 header #portNav .navbar-brand i {
   color: #00a63f;
 }
-header #navbarScroll .navbar-nav a {
-  color: rgba(63, 58, 100, 0.7);
+
+
+header #portNav #navbarScroll .navbar-nav {
+  margin-left: 50px;
+}
+header #navbarScroll .navbar-nav a.nav-link {
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0 5px 0 20px;
+}
+header #navbarScroll .navbar-nav a.dropdown-item {
+  color: #6C6888;
   font-weight: bold;
   font-size: 0.9rem;
   padding: 0 5px 0 20px;
 }
 header #navbarScroll .navbar-nav i {
-  color: rgba(63, 58, 100, 0.7);
+  color: white;
   font-size: 0.8rem;
   font-weight: bold;
 }
-header #navbarScroll .navbar-nav .active a {
-  color: #00a63f;
-}
+
 /* Nút search */
 header #navbarScroll i.fa-search {
   width: 46px;
@@ -108,11 +70,9 @@ header #navbarScroll i.fa-search {
   text-align: center;
   cursor: pointer;
   color: white;
-  position: fixed;
-  top: 27px;
-  right: 12%;
   z-index: 999;
 }
+
 
 .zoomed {
   animation: zoom-out 0.5s;
@@ -121,8 +81,71 @@ header #navbarScroll i.fa-search {
 .normal {
   animation: zoom-in 0.5s;
 }
+    /* Cụm 2 nút search và đổi theme */
+#portNav #navbarScroll .button_right{
+  position: absolute;
+  top: 22px;
+  right: 0;
+}
+    /* Nút search togger thu nhỏ  */
+#navbarScroll .navbar-toggler-icon.togglerX
+{
+  
+}
 
-/* Full search */
+    /* button light/dark */
+#switchButton {
+  font-size: 25px;
+  color: black;
+  transition: all 0.5s;
+  height: 46px;
+}
+#switchButton .fa-moon {
+  color: white;
+}
+#switchButton:focus {
+  box-shadow: none;
+}
+      /* Light theme */
+#myBody {
+  background-color: white;
+  transition: all 0.5s;
+}
+#switchButton .fa-sun {
+  display: none;
+}
+#switchButton .fa-moon {
+  display: block;
+}
+      /* Dark Theme*/
+      /* khi ko thể áp màu chữ nên thêm trực tiếp thẻ   darkthem   nếu cần chuyển chữ màu trắng và    darktheme_gray   nếu cần chuyển màu xám*/
+.dark#myBody {
+  background-color: rgb(21, 20, 33);
+  color: white;
+  transition: all 0.5s;
+}
+.dark #switchButton {
+  color: white;
+}
+.dark #switchButton .fa-sun {
+  display: block;
+}
+.dark #switchButton .fa-moon {
+  display: none;
+}
+#myBody.dark .darktheme {
+    color: white;
+  }
+  #myBody.dark .darktheme_gray {
+    color: rgb(180, 180, 180);
+    transition: all 0.5s;
+  }
+  #myBody.dark #navbarScroll .dropdown-menu {
+    border: 0.2px solid rgb(180, 180, 180);
+    background-color: black;
+  }
+
+    /* Full search */
 .full_search {
   display: none;
   position: absolute;
@@ -177,6 +200,41 @@ header #navbarScroll i.fa-search {
 }
 
 
+    /* show menu khi màn hình thu nhỏ */
+#portNav #navbarScroll.navbar-collapse.show .navbar-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#portNav #navbarScroll.navbar-collapse.show{
+  margin-top: 20px; 
+}
+
+
+    /* đổi màu header khi scoll */
+#header.scrolled {
+  background-color: white;
+  border: none;
+  height: 80px;
+}
+#header.scrolled.darktheme{
+  background-color: #151421;
+}
+#header.scrolled .navbar #portNav{
+  transform: translateY(-10px);
+  transition: all 0.3s;
+}
+#header.scrolled #navbarScroll .navbar-nav #active a {
+  color: #00a63f;
+}
+#header.scrolled .logo,
+#header.scrolled #switchButton .fa-moon{
+  color: #3F3A64;
+}
+#header.scrolled #navbarScroll .navbar-nav a.nav-link,
+#header.scrolled #navbarScroll .navbar-nav i{
+  color: #6C6888;
+}
 
 
 /* Keyframe Search Button */
@@ -199,9 +257,14 @@ header #navbarScroll i.fa-search {
   }
 }
 
-.carousel{
+.carousel div:first-of-type{
     background-color: bisque;
-    height: 70vh;
+    height: 80vh;
+  }
+  .test2{
+  background-color: yellowgreen;
+  height: 80vh;
+  margin: 20px;
 }
 
 /* Keyframe search full */
@@ -213,10 +276,5 @@ header #navbarScroll i.fa-search {
     100%{
     background-color: #00a63f;
     transform: scale(96);
-    }
-  }
-  @keyframes rotateX {
-    100%{
-      transform: rotate(-90deg);
     }
   }
