@@ -17,65 +17,70 @@ document.getElementById("switchButton").onclick = function () {
   document.getElementById("header").classList.toggle("darktheme");
 };
 
-
 // Button search open close animation
-const zoomButton = document.querySelector('.fa-search');
-const outButton = document.querySelector('.fa-close');
+const zoomButton = document.querySelector(".fa-search");
+const outButton = document.querySelector(".fa-close");
 
-zoomButton.addEventListener('click', () => {
-  zoomButton.classList.add('zoomed');
-  zoomButton.classList.remove('normal');
+zoomButton.addEventListener("click", () => {
+  zoomButton.classList.add("zoomed");
+  zoomButton.classList.remove("normal");
 });
 
-
-outButton.addEventListener('click', () => {
-if (zoomButton.classList.contains('zoomed')) {
-  zoomButton.classList.remove('zoomed');
-  zoomButton.classList.add('normal');
-} 
+outButton.addEventListener("click", () => {
+  if (zoomButton.classList.contains("zoomed")) {
+    zoomButton.classList.remove("zoomed");
+    zoomButton.classList.add("normal");
+  }
 });
-
 
 // Full search open close
-document.querySelector('.icon-material-search').addEventListener('click', function() {
-  document.querySelector('.full_search').style.display = 'block';
+document
+  .querySelector(".icon-material-search")
+  .addEventListener("click", function () {
+    document.querySelector(".full_search").style.display = "block";
+  });
 
+document.querySelector(".icon-close").addEventListener("click", function () {
+  document.querySelector(".full_search").style.display = "none";
 });
-
-document.querySelector('.icon-close').addEventListener('click', function() {
-  document.querySelector('.full_search').style.display = 'none';
-});
-
-
 
 // Set position cụm nút search và đổi theme khi màn hình nhỏ
-var clickCount = 0;
 
-document.querySelector('.navbar-toggler').addEventListener('click', function () {
-  
-  if (clickCount === 0) {
-    document.querySelector('.button_right').style.right = '15%';
-    // Thiết lập lại biến đếm để cho lần click tiếp theo
-    clickCount = 1;
-  } else if (clickCount === 1) {
-      document.querySelector('.button_right').style.right = '0%';
-      // Thiết lập lại biến trạng thái để cho lần click tiếp theo
+var clickCount = 0;
+document
+  .querySelector(".navbar-toggler")
+  .addEventListener("click", function () {
+    // ngăn người dùng cuộn chuột hay thao tác khác trước khi thoát khỏi phần show
+    document.body.style.overflow = "hidden";
+
+    if (clickCount === 0) {
+      // dịch chuyển 2 nút search và đổi theme
+      document.querySelector(".button_right").style.right = "15%";
+      // kéo dài header để khoảng full dc phần show
+      document.querySelector("#header").style.height = "250px";
+      document.querySelector("#header").style.border = "none";
+      
+      clickCount = 1;
+    } else if (clickCount === 1) {
+      document.querySelector(".button_right").style.right = "0%";
+      document.querySelector("#header").style.height = "";
+      document.body.style.overflow = "";
+      document.querySelector("#header").style.border = "";
+      
       clickCount = 0;
     }
-});
-
+  });
 
 // Chỉnh màu header khi scoll xuống
 
-window.addEventListener('scroll', function() {
+window.addEventListener("scroll", function () {
   // Kiểm tra xem trang đã được cuộn xuống hay chưa
   if (window.scrollY > 0) {
     document.getElementById("header").classList.add("scrolled");
-    document.getElementById('.active').classList.add("scrolled");
-  }
-  else {
+    document.getElementById(".active").classList.add("scrolled");
+  } else {
     // Xóa lớp "scrolled" khỏi phần tử body
-    document.getElementById("header").classList.remove('scrolled');
-    document.getElementById('.active').classList.remove("scrolled");
+    document.getElementById("header").classList.remove("scrolled");
+    document.getElementById(".active").classList.remove("scrolled");
   }
 });
