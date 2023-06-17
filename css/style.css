@@ -38,6 +38,12 @@ header #portNav .navbar-brand i {
   color: #00a63f;
 }
 
+.navbar-toggler {
+  background-color: #00a63f;
+}
+.navbar-toggler i{
+  color: white;
+}
 
 header #portNav #navbarScroll .navbar-nav {
   margin-left: 50px;
@@ -51,14 +57,24 @@ header #navbarScroll .navbar-nav a.nav-link {
 header #navbarScroll .navbar-nav a.dropdown-item {
   color: #6C6888;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding: 0 5px 0 20px;
+}
+header #navbarScroll .navbar-nav .page i{
+  color: white;
+}
+header #navbarScroll .dropdown-menu{
+  width: 195px;
+  line-height: 40px;
+  border: 1px solid rgba(108, 104, 136, 0.1);
+  border-radius: 15px;
 }
 header #navbarScroll .navbar-nav i {
   color: white;
   font-size: 0.8rem;
   font-weight: bold;
 }
+
 
 /* Nút search */
 header #navbarScroll i.fa-search {
@@ -207,8 +223,42 @@ header #navbarScroll i.fa-search {
   align-items: center;
 }
 #portNav #navbarScroll.navbar-collapse.show{
-  margin-top: 20px; 
+  margin-left: 0 !important; 
+  margin: 20px 0;
+  text-align: center;
+  align-items: center;
 }
+#portNav #navbarScroll.navbar-collapse.show li{
+  width: 100%;
+  height: 1.7rem;
+}
+#portNav #navbarScroll.navbar-collapse.show a{
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+#portNav #navbarScroll.navbar-collapse.show .nav-item.dropdown .page{
+  padding: 0 !important;
+  text-align: center;
+  width: 100%;
+}
+#portNav #navbarScroll.navbar-collapse.show ul.dropdown-menu{
+  width: 100%;
+  text-align: center;
+}
+#portNav #navbarScroll.navbar-collapse.show ul.dropdown-menu a{
+  font-size: 0.9rem;
+  
+}
+#portNav #navbarScroll.navbar-collapse.show .nav-item.dropdown i{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+/* #portNav #navbarScroll.navbar-collapse.show #contact{
+  position: absolute;
+  bottom: 16.5%;
+  left: 45%;
+} */
 
 
     /* đổi màu header khi scoll */

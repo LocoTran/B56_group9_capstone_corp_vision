@@ -31,55 +31,59 @@
     <div class="navbar">
       <nav class="navbar container navbar-expand-lg navbar-light" id="portNav">
         <a class="navbar-brand mr-5" href="#">
-            <div class="logo">
-                <i class="fa fa-align-right"></i>
-                <span class="darktheme">Corp Vision</span>
-                <div class="logo_bottom darktheme">Vision to your Future</div>
-            </div>
+          <div class="logo">
+            <i class="fa fa-align-right"></i>
+            <span class="darktheme">Corp Vision</span>
+            <div class="logo_bottom darktheme">Vision to your Future</div>
+          </div>
         </a>
-  
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
-            aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon "></span>
+          aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars" id="button_show"></i>
         </button>
-  
+
         <div class="collapse navbar-collapse ml-5" id="navbarScroll">
-            <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll" style="max-height: 150px;">
-                <li class="nav-item active" id="active">
-                    <a class="nav-link active darktheme_gray ml-xl-3 ml-0" href="#">HOME<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link darktheme_gray ml-xl-3 ml-0" href="#">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link darktheme_gray ml-xl-3 ml-0" href="#">SERVICES</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link darktheme_gray ml-xl-3 ml-0" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                        PAGES
-                        <i class="fa-solid fa-chevron-down darktheme_gray"></i>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item darktheme_gray" href="#">BLOG POST</a></li>
-                        <li><a class="dropdown-item darktheme_gray" href="#">404 PAGE</a></li>
-                        <li><a class="dropdown-item darktheme_gray" href="#">LANDING PAGE</a></li>
-                        <li><a class="dropdown-item darktheme_gray" href="#">ELEMENTS PAGE</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link darktheme_gray ml-xl-3 ml-0" href="#">CONTACT</a>
-                </li>
-            </ul>
-            <div class="button_right">
-                <i class="fa fa-search icon-material-search" id="open_search"></i>
-  
-                <button class="btn" id="switchButton">
-                    <i class="far fa-moon"></i>
-                    <i class="far fa-sun"></i>
-                </button>
-            </div>
+          <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll" style="max-height: 380px;">
+            <li class="nav-item active" id="active">
+              <a class="nav-link active darktheme_gray ml-xl-3 ml-0" href="#">HOME<span
+                  class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link darktheme_gray ml-xl-3 ml-0" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link darktheme_gray ml-xl-3 ml-0" href="#">SERVICES</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link darktheme_gray ml-xl-3 ml-0" href="#" role="button" data-toggle="dropdown"
+                aria-expanded="false">
+                <div class="page">
+                  <span>PAGES</span>
+                  <i class="fa-solid fa-chevron-down darktheme_gray"></i>
+                </div>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item darktheme_gray" href="#">BLOG POST</a></li>
+                <li><a class="dropdown-item darktheme_gray" href="#">404 PAGE</a></li>
+                <li><a class="dropdown-item darktheme_gray" href="#">LANDING PAGE</a></li>
+                <li><a class="dropdown-item darktheme_gray" href="#">ELEMENTS PAGE</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link darktheme_gray ml-xl-3 ml-0" href="#" id="contact">CONTACT</a>
+            </li>
+          </ul>
+          <div class="button_right">
+            <i class="fa fa-search icon-material-search" id="open_search"></i>
+
+            <button class="btn" id="switchButton">
+              <i class="far fa-moon"></i>
+              <i class="far fa-sun"></i>
+            </button>
+          </div>
         </div>
-    </nav>
+      </nav>
     </div>
     <div class="full_search">
       <div class="overplay_full"></div>
@@ -88,7 +92,7 @@
         <input class="input-search" name="s" placeholder="Start Typing" type="text">
       </form>
     </div>
-</header>
+  </header>
 
   <!-- CAROUSEL -->
   <section class="carousel">

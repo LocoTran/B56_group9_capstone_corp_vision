@@ -59,17 +59,42 @@ document
       // kéo dài header để khoảng full dc phần show
       document.querySelector("#header").style.height = "250px";
       document.querySelector("#header").style.border = "none";
-      
+      document.querySelector("#button_show").classList.add("fa-xmark");
+      document.querySelector("#button_show").classList.remove("fa-bars");
       clickCount = 1;
     } else if (clickCount === 1) {
       document.querySelector(".button_right").style.right = "0%";
       document.querySelector("#header").style.height = "";
       document.body.style.overflow = "";
       document.querySelector("#header").style.border = "";
+      document.querySelector("#button_show").classList.remove("fa-xmark");
+      document.querySelector("#button_show").classList.add("fa-bars");
       
       clickCount = 0;
     }
   });
+
+  var clickPage = 0;
+  document
+    .querySelector(".page")
+    .addEventListener("click", function () {
+      
+      if (clickPage === 0) {
+        // dịch chuyển 2 nút search và đổi theme
+        // document.querySelector(".dropdown-menu").style.posision = "fixed";
+        // kéo dài header để khoảng full dc phần show
+        document.querySelector("#header").style.height = "300px";
+        
+        clickPage = 1;
+      } else if (clickPage === 1) {
+        // document.querySelector(".dropdown-menu").style.posision = "";
+        document.querySelector("#header").style.height = "250px";
+        
+        
+        clickPage = 0;
+      }
+    });
+
 
 // Chỉnh màu header khi scoll xuống
 
