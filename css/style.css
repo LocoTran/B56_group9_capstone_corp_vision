@@ -285,6 +285,8 @@ header #navbarScroll i.fa-search {
   z-index: 1;
   background-color: rgba(50, 52, 70, 0.7);
 }
+
+  /* đường sóng lượn */
 .carousel svg{
   position: absolute;
   bottom: 0;
@@ -296,11 +298,10 @@ header #navbarScroll i.fa-search {
 .dark#myBody .carousel svg{
   fill: #151421;
 }
+
 .carousel #carouselExampleCaptions img {
   height: 110vh;
   object-fit: cover;
-  /* filter: grayscale(70%); */
-  /* background-size: cover; */
 }
 .carousel #carouselExampleCaptions .carousel-caption{
   width: 100%;
@@ -313,9 +314,7 @@ header #navbarScroll i.fa-search {
   padding-left: 10%;
 }
 
-
-
-
+  /* 2 nút trái/phải */
 .carousel .button_control{
   margin-left: 20px;
   display: flex;
@@ -347,7 +346,6 @@ header #navbarScroll i.fa-search {
 
 
 
-
 /* backtotop */
 .back-to-top {
   height: 50px;
@@ -369,12 +367,10 @@ header #navbarScroll i.fa-search {
   color: white;
 }
 .cd-top--is-visible { 
-  /* back-to-top button visible */
   visibility: visible;
   opacity: 1;
 }
 .cd-top--fade-out { 
-  /* reduce button opacity if user keeps scrolling */
   opacity: 1;
 }
 
