@@ -1,8 +1,9 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+<<<<<<< HEAD
 html,body{
     font-family: 'Jost', sans-serif;
 }
@@ -22,3 +23,325 @@ header .logo_bottom{
 .navbar #navbarContent {
     justify-content: space-around;
 }
+=======
+
+html,
+body {
+  font-family: "Jost", sans-serif;
+}
+
+/* HEADER */
+header {
+  border-bottom: 1px solid rgb(180, 180, 180);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100px;
+  z-index: 9;
+  transition: all 0.5s;
+}
+  /* Logo */
+header #portNav .navbar-brand {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: white;
+}
+header #portNav .navbar-brand .logo_bottom{
+  font-size: 0.9rem;
+  margin: -7px 0 0 40px;
+}
+header #portNav .navbar-brand i {
+  color: #00a63f;
+}
+
+header #portNav #navbarScroll .navbar-nav {
+  margin-left: 50px;
+}
+header #navbarScroll .navbar-nav a.nav-link {
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 0 5px 0 20px;
+}
+header #navbarScroll .navbar-nav a.dropdown-item {
+  color: #6C6888;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0 5px 0 20px;
+}
+header #navbarScroll .navbar-nav .page i{
+  color: white;
+}
+header #navbarScroll .dropdown-menu{
+  width: 195px;
+  line-height: 40px;
+  border: 1px solid rgba(108, 104, 136, 0.1);
+  border-radius: 15px;
+}
+header #navbarScroll .navbar-nav i {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+
+  /* Nút search */
+header #navbarScroll i.fa-search {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #00a63f;
+  line-height: 46px;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  z-index: 999;
+}
+
+
+.zoomed {
+  animation: zoom-out 0.5s;
+  opacity: 0;
+}
+.normal {
+  animation: zoom-in 0.5s;
+}
+    /* Cụm 2 nút search và đổi theme */
+#portNav #navbarScroll .button_right{
+  position: absolute;
+  top: 22px;
+  right: 0;
+}
+
+
+  /* button light/dark */
+#switchButton {
+  font-size: 25px;
+  color: black;
+  transition: all 0.5s;
+  height: 46px;
+}
+#switchButton .fa-moon {
+  color: white;
+}
+#switchButton:focus {
+  box-shadow: none;
+}
+      /* Light theme */
+#myBody {
+  background-color: white;
+  transition: all 0.5s;
+}
+#switchButton .fa-sun {
+  display: none;
+}
+#switchButton .fa-moon {
+  display: block;
+}
+    /* Dark Theme*/
+    /* khi ko thể áp màu chữ nên thêm trực tiếp thẻ   darkthem   nếu cần chuyển chữ màu trắng và    darktheme_gray   nếu cần chuyển màu xám*/
+.dark#myBody {
+  background-color: rgb(21, 20, 33);
+  color: white;
+  transition: all 0.5s;
+}
+.dark #switchButton {
+  color: white;
+}
+.dark #switchButton .fa-sun {
+  display: block;
+}
+.dark #switchButton .fa-moon {
+  display: none;
+}
+#myBody.dark .darktheme {
+    color: white;
+}
+#myBody.dark .darktheme_gray {
+  color: rgb(180, 180, 180);
+  transition: all 0.5s;
+}
+#myBody.dark #navbarScroll dropdown-menu {
+  border: 0.2px solid rgba(180, 180,180, 0.1);
+  background-color: black;
+}
+
+  /* Full search */
+.full_search {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  overflow: hidden;
+  z-index: 99;
+}
+.full_search .overplay_full {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  none;
+  position: absolute;
+  top: 27px;
+  right: 12%;
+  animation: zoomfull 0.5s forwards;
+  transition: all 0.5s;
+  z-index: 2;
+}
+.full_search .fa-close {
+  color: white;
+  position: absolute;
+  top: 70px;
+  right: 12%;
+  z-index: 9;
+  font-size: 80px;
+  cursor: pointer;
+  animation: rotateX 0.5s;
+  transition: all 0.5s;
+}
+.full_search input.input-search {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 54px;
+  outline: 0;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+}
+.full_search input.input-search::placeholder {
+  color: white;
+  font-weight: 300;
+}
+
+
+  /* menu show khi màn hình thu nhỏ */
+.navbar-toggler {
+  background-color: #00a63f;
+}
+.navbar-toggler i{
+  color: white;
+}
+#portNav #navbarScroll.navbar-collapse.show .navbar-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#portNav #navbarScroll.navbar-collapse.show{
+  margin-left: 0 !important; 
+  margin: 20px 0;
+  text-align: center;
+  align-items: center;
+}
+#portNav #navbarScroll.navbar-collapse.show li{
+  width: 100%;
+  height: 1.7rem;
+}
+#portNav #navbarScroll.navbar-collapse.show a{
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+#portNav #navbarScroll.navbar-collapse.show .nav-item.dropdown .page{
+  padding: 0 !important;
+  text-align: center;
+  width: 100%;
+}
+#portNav #navbarScroll.navbar-collapse.show ul.dropdown-menu{
+  width: 100%;
+  text-align: center;
+}
+#portNav #navbarScroll.navbar-collapse.show ul.dropdown-menu a{
+  font-size: 0.9rem;
+  
+}
+#portNav #navbarScroll.navbar-collapse.show .nav-item.dropdown i{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+  /* đổi màu header khi scoll */
+#header.scrolled {
+  background-color: white;
+  border: none;
+  height: 80px;
+}
+#header.scrolled.darktheme{
+  background-color: #151421;
+}
+#header.scrolled .navbar #portNav{
+  transform: translateY(-10px);
+  transition: all 0.3s;
+}
+#header.scrolled #navbarScroll .navbar-nav #active a {
+  color: #00a63f;
+}
+#header.scrolled .logo,
+#header.scrolled #switchButton .fa-moon{
+  color: #3F3A64;
+}
+#header.scrolled #navbarScroll .navbar-nav a.nav-link,
+#header.scrolled #navbarScroll .navbar-nav i{
+  color: #6C6888;
+}
+
+
+/* CAROUSEL */
+
+.carousel div:first-of-type{
+  background-color: bisque;
+  height: 80vh;
+}
+.test2{
+  background-color: yellowgreen;
+  height: 80vh;
+  margin: 20px;
+}
+
+/* Keyframe Search Button */
+@keyframes zoom-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(24);
+  }
+}
+@keyframes zoom-in {
+  0% {
+    opacity: 1;
+    transform: scale(48);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Keyframe search full */
+@keyframes zoomfull {
+50%{
+    
+        background-color: #00a63f;
+    }
+    100%{
+    background-color: #00a63f;
+    transform: scale(96);
+    }
+  }
+
+/* Keyframe rotate buttonX */
+@keyframes rotateX {
+  100%{
+    transform: rotate(-90deg);
+  }
+}
+
+>>>>>>> header
