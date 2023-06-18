@@ -63,7 +63,7 @@ document
       document.querySelector("#button_show").classList.remove("fa-bars");
       clickCount = 1;
     } else if (clickCount === 1) {
-      document.querySelector(".button_right").style.right = "0%";
+      document.querySelector(".button_right").style.right = "";
       document.querySelector("#header").style.height = "";
       document.body.style.overflow = "";
       document.querySelector("#header").style.border = "";
@@ -79,7 +79,7 @@ document
     .querySelector(".page")
     .addEventListener("click", function () {
       
-      if (clickPage === 0) {
+      if (clickPage === 0 && window.innerWidth < 992) {
         // dịch chuyển 2 nút search và đổi theme
         // document.querySelector(".dropdown-menu").style.posision = "fixed";
         // kéo dài header để khoảng full dc phần show

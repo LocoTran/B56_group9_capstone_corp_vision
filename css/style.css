@@ -3,13 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   font-family: "Jost", sans-serif;
 }
 
-
-  
 /* HEADER */
 header {
   border-bottom: 1px solid rgb(180, 180, 180);
@@ -21,10 +20,7 @@ header {
   z-index: 9;
   transition: all 0.5s;
 }
-header #portNav {
-  height: 100%;
-  /* margin: auto; */
-}
+  /* Logo */
 header #portNav .navbar-brand {
   font-size: 1.9rem;
   font-weight: bold;
@@ -36,13 +32,6 @@ header #portNav .navbar-brand .logo_bottom{
 }
 header #portNav .navbar-brand i {
   color: #00a63f;
-}
-
-.navbar-toggler {
-  background-color: #00a63f;
-}
-.navbar-toggler i{
-  color: white;
 }
 
 header #portNav #navbarScroll .navbar-nav {
@@ -76,7 +65,7 @@ header #navbarScroll .navbar-nav i {
 }
 
 
-/* Nút search */
+  /* Nút search */
 header #navbarScroll i.fa-search {
   width: 46px;
   height: 46px;
@@ -103,13 +92,9 @@ header #navbarScroll i.fa-search {
   top: 22px;
   right: 0;
 }
-    /* Nút search togger thu nhỏ  */
-#navbarScroll .navbar-toggler-icon.togglerX
-{
-  
-}
 
-    /* button light/dark */
+
+  /* button light/dark */
 #switchButton {
   font-size: 25px;
   color: black;
@@ -133,8 +118,8 @@ header #navbarScroll i.fa-search {
 #switchButton .fa-moon {
   display: block;
 }
-      /* Dark Theme*/
-      /* khi ko thể áp màu chữ nên thêm trực tiếp thẻ   darkthem   nếu cần chuyển chữ màu trắng và    darktheme_gray   nếu cần chuyển màu xám*/
+    /* Dark Theme*/
+    /* khi ko thể áp màu chữ nên thêm trực tiếp thẻ   darkthem   nếu cần chuyển chữ màu trắng và    darktheme_gray   nếu cần chuyển màu xám*/
 .dark#myBody {
   background-color: rgb(21, 20, 33);
   color: white;
@@ -151,17 +136,17 @@ header #navbarScroll i.fa-search {
 }
 #myBody.dark .darktheme {
     color: white;
-  }
-  #myBody.dark .darktheme_gray {
-    color: rgb(180, 180, 180);
-    transition: all 0.5s;
-  }
-  #myBody.dark #navbarScroll .dropdown-menu {
-    border: 0.2px solid rgb(180, 180, 180);
-    background-color: black;
-  }
+}
+#myBody.dark .darktheme_gray {
+  color: rgb(180, 180, 180);
+  transition: all 0.5s;
+}
+#myBody.dark #navbarScroll dropdown-menu {
+  border: 0.2px solid rgba(180, 180,180, 0.1);
+  background-color: black;
+}
 
-    /* Full search */
+  /* Full search */
 .full_search {
   display: none;
   position: absolute;
@@ -196,7 +181,6 @@ header #navbarScroll i.fa-search {
   animation: rotateX 0.5s;
   transition: all 0.5s;
 }
-
 .full_search input.input-search {
   background-color: transparent;
   color: white;
@@ -216,7 +200,13 @@ header #navbarScroll i.fa-search {
 }
 
 
-    /* show menu khi màn hình thu nhỏ */
+  /* menu show khi màn hình thu nhỏ */
+.navbar-toggler {
+  background-color: #00a63f;
+}
+.navbar-toggler i{
+  color: white;
+}
 #portNav #navbarScroll.navbar-collapse.show .navbar-nav{
   display: flex;
   justify-content: center;
@@ -254,14 +244,9 @@ header #navbarScroll i.fa-search {
   top: 0;
   right: 0;
 }
-/* #portNav #navbarScroll.navbar-collapse.show #contact{
-  position: absolute;
-  bottom: 16.5%;
-  left: 45%;
-} */
 
 
-    /* đổi màu header khi scoll */
+  /* đổi màu header khi scoll */
 #header.scrolled {
   background-color: white;
   border: none;
@@ -287,6 +272,18 @@ header #navbarScroll i.fa-search {
 }
 
 
+/* CAROUSEL */
+
+.carousel div:first-of-type{
+  background-color: bisque;
+  height: 80vh;
+}
+.test2{
+  background-color: yellowgreen;
+  height: 80vh;
+  margin: 20px;
+}
+
 /* Keyframe Search Button */
 @keyframes zoom-out {
   0% {
@@ -307,16 +304,6 @@ header #navbarScroll i.fa-search {
   }
 }
 
-.carousel div:first-of-type{
-    background-color: bisque;
-    height: 80vh;
-  }
-  .test2{
-  background-color: yellowgreen;
-  height: 80vh;
-  margin: 20px;
-}
-
 /* Keyframe search full */
 @keyframes zoomfull {
 50%{
@@ -328,3 +315,11 @@ header #navbarScroll i.fa-search {
     transform: scale(96);
     }
   }
+
+/* Keyframe rotate buttonX */
+@keyframes rotateX {
+  100%{
+    transform: rotate(-90deg);
+  }
+}
+
