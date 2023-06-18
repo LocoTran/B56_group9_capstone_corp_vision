@@ -284,6 +284,36 @@ header #navbarScroll i.fa-search {
   margin: 20px;
 }
 
+/* backtotop */
+.back-to-top {
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  color: white;
+  background-color: #00a63f;
+  border-radius: 50%;
+  position: fixed;
+
+  opacity: 0;
+  visibility: hidden;
+}
+.back-to-top:hover i{
+  color: white;
+}
+.cd-top--is-visible { 
+  /* back-to-top button visible */
+  visibility: visible;
+  opacity: 1;
+}
+.cd-top--fade-out { 
+  /* reduce button opacity if user keeps scrolling */
+  opacity: 1;
+}
+
 /* Keyframe Search Button */
 @keyframes zoom-out {
   0% {
