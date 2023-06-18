@@ -273,16 +273,20 @@ header #navbarScroll i.fa-search {
 
 
 /* CAROUSEL */
-
-.carousel div:first-of-type{
+.carousel{
   background-color: bisque;
-  height: 80vh;
+  height: 110vh;
 }
-.test2{
-  background-color: yellowgreen;
-  height: 80vh;
-  margin: 20px;
+.carousel svg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  fill: white;
 }
+.dark#myBody .carousel svg{
+  fill: #151421;
+}
+
 
 /* backtotop */
 .back-to-top {
@@ -313,6 +317,7 @@ header #navbarScroll i.fa-search {
   /* reduce button opacity if user keeps scrolling */
   opacity: 1;
 }
+
 
 /* Keyframe Search Button */
 @keyframes zoom-out {
