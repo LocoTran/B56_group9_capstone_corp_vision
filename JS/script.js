@@ -24,24 +24,17 @@ const outButton = document.querySelector(".fa-close");
 zoomButton.addEventListener("click", () => {
   zoomButton.classList.add("zoomed");
   zoomButton.classList.remove("normal");
+  // Full search open close
+  document.querySelector(".full_search").style.display = "block";
 });
 
 outButton.addEventListener("click", () => {
+  // Full search open close
+  document.querySelector(".full_search").style.display = "none";
   if (zoomButton.classList.contains("zoomed")) {
     zoomButton.classList.remove("zoomed");
     zoomButton.classList.add("normal");
   }
-});
-
-// Full search open close
-document
-  .querySelector(".icon-material-search")
-  .addEventListener("click", function () {
-    document.querySelector(".full_search").style.display = "block";
-  });
-
-document.querySelector(".icon-close").addEventListener("click", function () {
-  document.querySelector(".full_search").style.display = "none";
 });
 
 // Set position cụm nút search và đổi theme khi màn hình nhỏ
@@ -69,32 +62,25 @@ document
       document.querySelector("#header").style.border = "";
       document.querySelector("#button_show").classList.remove("fa-xmark");
       document.querySelector("#button_show").classList.add("fa-bars");
-      
+
       clickCount = 0;
     }
   });
 
-  var clickPage = 0;
-  document
-    .querySelector(".page")
-    .addEventListener("click", function () {
-      
-      if (clickPage === 0 && window.innerWidth < 992) {
-        // dịch chuyển 2 nút search và đổi theme
-        // document.querySelector(".dropdown-menu").style.posision = "fixed";
-        // kéo dài header để khoảng full dc phần show
-        document.querySelector("#header").style.height = "300px";
-        
-        clickPage = 1;
-      } else if (clickPage === 1) {
-        // document.querySelector(".dropdown-menu").style.posision = "";
-        document.querySelector("#header").style.height = "250px";
-        
-        
-        clickPage = 0;
-      }
-    });
+  // Nhấn vào phần Page
+var clickPage = 0;
+document.querySelector(".page").addEventListener("click", function () {
+  if (clickPage === 0 && window.innerWidth < 992) {
+    // kéo dài header để khoảng full dc phần show
+    document.querySelector("#header").style.height = "300px";
 
+    clickPage = 1;
+  } else if (clickPage === 1) {
+    document.querySelector("#header").style.height = "250px";
+
+    clickPage = 0;
+  }
+});
 
 // Chỉnh màu header khi scoll xuống
 
