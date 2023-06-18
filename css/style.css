@@ -3,27 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-<<<<<<< HEAD
-html,body{
-    font-family: 'Jost', sans-serif;
-}
-/* HEADER */
-header .navbar-brand span{
-
-}
-header .logo_bottom{
-    display: block;
-    font-size: 0.8rem;
-    padding-left: 2rem;
-}
-#portNav {
-    display: flex;
-    justify-content: space-around;
-}
-.navbar #navbarContent {
-    justify-content: space-around;
-}
-=======
 
 html,
 body {
@@ -344,4 +323,3 @@ header #navbarScroll i.fa-search {
   }
 }
 
->>>>>>> header
