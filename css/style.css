@@ -23,6 +23,116 @@ header .logo_bottom{
     justify-content: space-around;
 }
 
+/* ABOUT  */
+.about {
+    margin: 80px 0;
+}
+
+.about_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about ul {
+    list-style: none;
+}
+
+.About__right {
+    position: relative;
+}
+
+#about .title-small {
+    color: #7e7d7d;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 1;
+    letter-spacing: 1px;
+    line-height: 30px;
+    display: block;
+}
+
+#about .title-big {
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 45px;
+    color: #212529;
+    text-align: left;
+}
+
+#about .about_content p {
+    font-size: 17px;
+    line-height: 27px;
+    color: #404040;
+    opacity: .8;
+}
+
+#about .fa {
+    display: inline-block;
+    color: #00a63f;
+    margin-right: 5px;
+}
+
+#about a {
+    color: #404040;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 550;
+}
+
+#about .service-list li {
+    margin: 10px 0;
+}
+
+#about .img-fluid {
+    border-radius: 10px;
+}
+
+#about .about_content .service-list li:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1080px) {
+    #about .title-big {
+        font-size: 32px !important;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 568px) {
+    #about .title-big {
+        font-size: 30px !important;
+        line-height: 38px;
+    }
+
+    #about .service-list li {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #about .about__img .row {
+        padding: 0 10px;
+    }
+
+    #about .about__img .row .col-6 {
+        padding: 0 5px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    #about .title-big {
+        font-size: 26px !important;
+        line-height: 32px;
+    }
+
+    #about .service-list li {
+        margin-bottom: 5px;
+    }
+}
+
 /* CHALLENGE */
 .challenge {
     margin: 80px 0;
