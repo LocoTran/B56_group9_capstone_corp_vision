@@ -21,16 +21,18 @@ document.getElementById("switchButton").onclick = function () {
 const zoomButton = document.querySelector(".fa-search");
 const outButton = document.querySelector(".fa-close");
 
+const fullsearch = document.querySelector(".full_search");
+
 zoomButton.addEventListener("click", () => {
   zoomButton.classList.add("zoomed");
   zoomButton.classList.remove("normal");
   // Full search open close
-  document.querySelector(".full_search").style.display = "block";
+  fullsearch.style.display = "block";
 });
 
 outButton.addEventListener("click", () => {
   // Full search open close
-  document.querySelector(".full_search").style.display = "none";
+  fullsearch.style.display = "none";
   if (zoomButton.classList.contains("zoomed")) {
     zoomButton.classList.remove("zoomed");
     zoomButton.classList.add("normal");
@@ -38,6 +40,9 @@ outButton.addEventListener("click", () => {
 });
 
 // Set position cụm nút search và đổi theme khi màn hình nhỏ
+const btn2 = document.querySelector(".button_right");
+const fheader = document.querySelector("#header");
+const btnshow = document.querySelector("#button_show");
 
 var clickCount = 0;
 document
@@ -48,50 +53,49 @@ document
 
     if (clickCount === 0) {
       // dịch chuyển 2 nút search và đổi theme
-      document.querySelector(".button_right").style.right = "15%";
+      btn2.style.right = "15%";
       // kéo dài header để khoảng full dc phần show
-      document.querySelector("#header").style.height = "250px";
-      document.querySelector("#header").style.border = "none";
-      document.querySelector("#button_show").classList.add("fa-xmark");
-      document.querySelector("#button_show").classList.remove("fa-bars");
+      fheader.style.height = "250px";
+      fheader.style.border = "none";
+      btnshow.classList.add("fa-xmark");
+      btnshow.classList.remove("fa-bars");
+
       clickCount = 1;
     } else if (clickCount === 1) {
-      document.querySelector(".button_right").style.right = "";
-      document.querySelector("#header").style.height = "";
+      btn2.style.right = "";
+      fheader.style.height = "";
       document.body.style.overflow = "";
-      document.querySelector("#header").style.border = "";
-      document.querySelector("#button_show").classList.remove("fa-xmark");
-      document.querySelector("#button_show").classList.add("fa-bars");
+      fheader.style.border = "";
+      btnshow.classList.remove("fa-xmark");
+      btnshow.classList.add("fa-bars");
 
       clickCount = 0;
     }
   });
 
-  // Nhấn vào phần Page
+// Nhấn vào phần Page
 var clickPage = 0;
 document.querySelector(".page").addEventListener("click", function () {
   if (clickPage === 0 && window.innerWidth < 992) {
     // kéo dài header để khoảng full dc phần show
-    document.querySelector("#header").style.height = "300px";
-
+    fheader.style.height = "300px";
     clickPage = 1;
   } else if (clickPage === 1) {
-    document.querySelector("#header").style.height = "250px";
-
+    fheader.style.height = "250px";
     clickPage = 0;
   }
 });
 
 // Chỉnh màu header khi scoll xuống
+const page_active = document.getElementById(".active");
 
 window.addEventListener("scroll", function () {
   // Kiểm tra xem trang đã được cuộn xuống hay chưa
   if (window.scrollY > 0) {
-    document.getElementById("header").classList.add("scrolled");
-    document.getElementById(".active").classList.add("scrolled");
+    fheader.classList.add("scrolled");
+    page_active.classList.add("scrolled");
   } else {
-    // Xóa lớp "scrolled" khỏi phần tử body
-    document.getElementById("header").classList.remove("scrolled");
-    document.getElementById(".active").classList.remove("scrolled");
+    fheader.classList.remove("scrolled");
+    page_active.classList.remove("scrolled");
   }
 });
