@@ -101,6 +101,15 @@ header #navbarScroll i.fa-search {
   transition: all 0.5s;
   height: 46px;
 }
+  /* ngăn di chuyển nút đổi theme */
+#switchButton::after{
+  content: "\f185";
+  font-family: "Font Awesome 6 Free";
+  font-size: 26px;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
 #switchButton .fa-moon {
   color: white;
 }
