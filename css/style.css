@@ -64,7 +64,6 @@ header #navbarScroll .navbar-nav i {
   font-weight: bold;
 }
 
-
   /* Nút search */
 header #navbarScroll i.fa-search {
   width: 46px;
@@ -77,8 +76,6 @@ header #navbarScroll i.fa-search {
   color: white;
   z-index: 999;
 }
-
-
 .zoomed {
   animation: zoom-out 0.5s;
   opacity: 0;
@@ -92,7 +89,6 @@ header #navbarScroll i.fa-search {
   top: 22px;
   right: 0;
 }
-
 
   /* button light/dark */
 #switchButton {
@@ -243,9 +239,11 @@ header #navbarScroll i.fa-search {
   width: 100%;
   text-align: center;
 }
+.dark#myBody #portNav #navbarScroll.navbar-collapse ul.dropdown-menu{
+  background-color: #151421;
+}
 #portNav #navbarScroll.navbar-collapse.show ul.dropdown-menu a{
   font-size: 0.9rem;
-  
 }
 #portNav #navbarScroll.navbar-collapse.show .nav-item.dropdown i{
   position: absolute;
@@ -307,21 +305,6 @@ header #navbarScroll i.fa-search {
   fill: #151421;
 }
 
-.carousel #carouselExampleCaptions img {
-  height: 110vh;
-  object-fit: cover;
-}
-.carousel #carouselExampleCaptions .carousel-caption{
-  width: 100%;
-  height: 50%;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 1;
-  text-align: left;
-  padding-left: 10%;
-}
-
   /* 2 nút trái/phải */
 .carousel .button_control{
   margin-left: 20px;
@@ -350,6 +333,46 @@ header #navbarScroll i.fa-search {
   box-shadow: none;
   color: white;
 }
+
+  /* content */
+.carousel #carouselExampleCaptions img {
+  height: 110vh;
+  object-fit: cover;
+}
+.carousel #carouselExampleCaptions .carousel-caption{
+  width: 60%;
+  height: 50%;
+  position: absolute;
+  top: 25%;
+  left: 0;
+  z-index: 1;
+  text-align: left;
+  padding-left: 13%;
+}
+
+.carousel .carousel-caption h2{
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.carousel .carousel-caption p{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.carousel .carousel-caption button{
+  width: 190px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #00a63f;
+  color: white;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+.carousel #carouselExampleCaptions .carousel-caption button:hover{
+  background-color: #008030;
+}
+
 
 
 
@@ -382,6 +405,69 @@ header #navbarScroll i.fa-search {
   opacity: 1;
 }
 
+/* MEDIA RESPONSIVE */
+@media screen and (max-width:1200px) {
+  .carousel{
+    height: 110vh;
+  }
+  .carousel #carouselExampleCaptions img {
+    height: 110vh;
+  }
+  .carousel .carousel-caption h2{
+    font-size: 50px;
+  }
+  .carousel #carouselExampleCaptions .carousel-caption{
+    width: 70%;
+    padding-left: 11%;
+  }
+}
+@media screen and (max-width:992px) {
+  .carousel{
+    height: 100vh;
+  }
+  .carousel #carouselExampleCaptions img {
+    height: 100vh;
+  }
+  .carousel .carousel-caption h2{
+    font-size: 45px;
+  }
+  .carousel #carouselExampleCaptions .carousel-caption{
+    width: 80%;
+    padding-left: 9%;
+  }
+}
+@media screen and (max-width:768px) {
+  /* Carousel */
+  .carousel{
+    height: 90vh;
+  }
+  .carousel #carouselExampleCaptions img {
+    height: 90vh;
+  }
+  .carousel .carousel-caption h2{
+    font-size: 40px;
+  }
+  .carousel #carouselExampleCaptions .carousel-caption{
+    width: 90%;
+    padding-left: 7%;
+  }
+}
+@media screen and (max-width:576px) {
+  /* Carousel */
+  .carousel{
+    height: 80vh;
+  }
+  .carousel #carouselExampleCaptions img {
+    height: 80vh;
+  }
+  .carousel .carousel-caption h2{
+    font-size: 35px;
+  }
+  .carousel #carouselExampleCaptions .carousel-caption{
+    width: 100%;
+    padding-left: 5%;
+  }
+}
 
 /* Keyframe Search Button */
 @keyframes zoom-out {
