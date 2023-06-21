@@ -374,7 +374,10 @@ header #navbarScroll i.fa-search {
 }
 
 
-
+/* SERVICES */
+.services{
+  background-color: yellowgreen;
+}
 
 
 /* backtotop */
