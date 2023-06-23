@@ -341,7 +341,7 @@ header #navbarScroll i.fa-search {
   object-fit: cover;
 }
 .carousel #carouselExampleCaptions .carousel-caption{
-  width: 60%;
+  width: 65%;
   height: 50%;
   position: absolute;
   top: 25%;
@@ -375,6 +375,89 @@ header #navbarScroll i.fa-search {
 }
 
 
+/* SERVICES */
+.services h2{
+  padding: 100px 0 50px 0;
+  font-weight: bold;
+}
+.services .row{
+  width: calc(400px * 3); 
+  position: relative;
+}
+.services .row .card{
+  border-radius: 10px;
+  overflow: hidden;
+  border: none;
+  background-color: inherit;
+  height: 400px;
+}
+.services .card .services_img{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.services .card .services_img::after{
+  content: attr(title);
+  box-shadow: 1px 1px 3px rgba(63, 58, 100, 0.2);
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 19px;
+  font-weight: bold;
+  width: 70%;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.dark#myBody .services .card .services_img::after{
+    background-color: #151421;
+    color: white;
+    border: 1px solid rgba(108, 104, 136, 0.244);
+}
+.services .card .services_img:hover::after{
+    color: #00a63f !important;
+}
+.services .card img{
+  width: 100%;
+  object-fit: cover;
+}
+.services .card p{
+  margin-top: 40px;
+  color: #6C6888;
+  position: absolute;
+  width: 80%;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.services .card button{
+  display: block ;
+  margin: auto;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  color: black;
+  transition: all 0.5s;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.services .card button:hover{
+  color: #00a63f;
+}
+.dark#myBody .services .card button{
+  color: white;
+}
+.dark#myBody .services .card button:hover{
+  color: #00a63f;
+}
 
 
 
@@ -407,7 +490,14 @@ header #navbarScroll i.fa-search {
 }
 
 /* MEDIA RESPONSIVE */
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1399.98px){
+  /* services */
+  .services .row{
+    width: calc(380px*3);
+  }
+}
+@media screen and (max-width:1199.98px) {
+  /* carousel */
   .carousel{
     height: 110vh;
   }
@@ -421,8 +511,20 @@ header #navbarScroll i.fa-search {
     width: 70%;
     padding-left: 11%;
   }
+  /* services */
+  .services .row{
+    width: calc(320px*3);
+    height: 380px;
+  }
+  .services .card p{
+    top:60%;
+  }
+  .services .card button{
+    top: 85%;
+  }
 }
-@media screen and (max-width:992px) {
+@media screen and (max-width:991.98px) {
+  /* carousel */
   .carousel{
     height: 100vh;
   }
@@ -436,8 +538,26 @@ header #navbarScroll i.fa-search {
     width: 80%;
     padding-left: 9%;
   }
+  /* services */
+  .services .row{
+    width: calc(360px*2);
+    height: 380px;
+  }
+  .services .card p{
+    top: 62%;
+  }
+  .services .card button{
+    top: 85%;
+  }
+  .services .card#last_card{
+    width: 330px;
+    transform: translateX(50%)
+  }
+  .services .card .services_img::after{
+    width: 85%;
+  }
 }
-@media screen and (max-width:768px) {
+@media screen and (max-width:767.98px) {
   /* Carousel */
   .carousel{
     height: 90vh;
@@ -452,8 +572,32 @@ header #navbarScroll i.fa-search {
     width: 90%;
     padding-left: 7%;
   }
+  /* services */
+  .services .row{
+    height: 1530px;
+    width: 510px;
+  }
+  .services .card#last_card{
+      width: 510px;
+      height: 500px;
+      transform: translateX(0);
+  }
+  .services .col-12 .card{
+      width: 510px;
+      height: 500px;
+  }
+  
+  .services .card p{
+    top: 72%;
+  }
+  .services .card button{
+    top: 90%;
+  }
+  .services .card .services_img::after{
+    width: 60%;
+  }
 }
-@media screen and (max-width:576px) {
+@media screen and (max-width:575.98px) {
   /* Carousel */
   .carousel{
     height: 80vh;
@@ -467,6 +611,26 @@ header #navbarScroll i.fa-search {
   .carousel #carouselExampleCaptions .carousel-caption{
     width: 100%;
     padding-left: 5%;
+  }
+  /* services */
+  .services .row{
+    /* height: 1530px; */
+    width: 95%;
+  }
+  .services .col-12 .card{
+    width: 100%;
+    /* height: 500px; */
+}
+.services .card#last_card{
+    width: 100%;
+    /* height: 500px; */
+    transform: translateX(0);
+}
+.services .card p{
+    top: 64%;
+  }
+  .services .card button{
+    top: 85%;
   }
 }
 
