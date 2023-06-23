@@ -1004,7 +1004,7 @@ header #navbarScroll i.fa-search {
 
 /* ANIMATE ANIMATION */
 :root {
-  --animate-duration: 1300ms;
+  --animate-duration: 900ms;
 }
 
 .animate__animated.animate__fadeIn {
