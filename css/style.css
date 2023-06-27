@@ -1167,7 +1167,6 @@ header #navbarScroll i.fa-search {
   .carousel .carousel-caption h2 {
     font-size: 35px;
   }
-
   .carousel #carouselExampleCaptions .carousel-caption {
     width: 100%;
     padding-left: 5%;
@@ -1221,7 +1220,6 @@ header #navbarScroll i.fa-search {
   }
 }
 
-
 /* ANIMATE ANIMATION */
 :root {
   --animate-duration: 900ms;
@@ -1243,7 +1241,6 @@ header #navbarScroll i.fa-search {
     transform: scale(24);
   }
 }
-
 @keyframes zoom-in {
   0% {
     opacity: 1;
@@ -1254,7 +1251,6 @@ header #navbarScroll i.fa-search {
     transform: scale(1);
   }
 }
-
 /* Keyframe search full */
 @keyframes zoomfull {
   50% {
@@ -1266,7 +1262,6 @@ header #navbarScroll i.fa-search {
     transform: scale(96);
   }
 }
-
 /* Keyframe rotate buttonX */
 @keyframes rotateX {
   100% {
