@@ -1365,6 +1365,17 @@ header #navbarScroll i.fa-search {
     padding-top: 0;
   }
 }
+@media screen and (max-width: 448.98px) {
+  .success .success_item.marketing .circle {
+    top: 50%;
+  }
+  .success .success_item.web .circle {
+    top: 66%;
+  }
+  .success .success_item.analytic .circle {
+    top: 82%;
+  }
+}
 
 /* ANIMATE ANIMATION */
 :root {
