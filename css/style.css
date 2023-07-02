@@ -695,15 +695,30 @@ header #navbarScroll i.fa-search {
 #about .about_content .service-list li:last-child {
   margin-bottom: 0;
 }
+.dark#myBody .about {
+  background-color: #151421;
+}
 
-@media screen and (max-width: 1080px) {
+.dark#myBody .about__title {
+  color: #fff;
+}
+.dark#myBody #about .title-big{
+  color: #eee;
+}
+.dark#myBody .about_content p{
+  color: #c2c2c2;
+}
+.dark#myBody .about_content ul a {
+  color: #fff;
+}
+@media screen and (max-width: 1200px) {
   #about .title-big {
     font-size: 32px !important;
     line-height: 40px;
   }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 576px) {
   #about .title-big {
     font-size: 30px !important;
     line-height: 38px;
@@ -737,8 +752,10 @@ header #navbarScroll i.fa-search {
 
 /* CHALENGE  */
 .challenge {
-  margin-bottom: 80px;
-  padding: 50px 0;
+  /* margin-bottom: 80px;
+  padding: 50px 0; */
+  padding-top: 80px;
+  padding-bottom: 90px;
   background-color: #f7f7f7;
 }
 
@@ -824,21 +841,34 @@ header #navbarScroll i.fa-search {
 #challenge .challenge__item .title__head:hover {
   color: #00802b;
 }
+.dark#myBody .challenge {
+  background-color: #100f19;
+}
 
-@media screen and (max-width: 1080px) {
+.dark#myBody .challenge__right .challenge__item {
+  background-color: #181723;
+}
+
+.dark#myBody .challenge__item h4 {
+  color: #fff;
+}
+.dark#myBody .challenge__content .challenge__text{
+  color: #c2c2c2;
+}
+@media screen and (max-width: 1200px) {
   .challenge__title {
     font-size: 30px !important;
     line-height: 38px;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 992px) {
   .challenge .challenge__gird {
     padding: 1.5em;
   }
 }
 
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 768px) {
   #challenge .challenge__item .title__head {
     font-size: 18px;
   }
@@ -848,7 +878,7 @@ header #navbarScroll i.fa-search {
   }
 }
 
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 576px) {
   .challenge__title {
     font-size: 30px !important;
     line-height: 38px;
