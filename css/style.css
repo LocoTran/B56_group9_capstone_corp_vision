@@ -519,6 +519,9 @@ header #navbarScroll i.fa-search {
   color: #00a63f;
 }
 /* GALLERY  */
+.gallery{
+  background-color: #f8f9fa;
+}
 #gallery .gallery_item a {
   text-decoration: none;
 }
