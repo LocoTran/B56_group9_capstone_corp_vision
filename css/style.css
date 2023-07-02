@@ -518,7 +518,113 @@ header #navbarScroll i.fa-search {
 .dark#myBody .services .card button:hover {
   color: #00a63f;
 }
+/* GALLERY  */
+#gallery .gallery_item a {
+  text-decoration: none;
+}
 
+#gallery .gallery_item .hover-content .content {
+  font-size: 18px;
+  color: #eee;
+  display: block;
+}
+
+#gallery .gallery_item .title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#gallery .title-content {
+  max-width: 800px;
+  margin: auto;
+}
+
+#gallery .title-content .title-small {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 30px;
+  letter-spacing: 1px;
+  color: #7e7d7d;
+  display: block;
+}
+
+#gallery .title-content .title-big {
+  font-size: 35px;
+  line-height: 45px;
+  font-weight: 700;
+}
+
+#gallery .gallery_item {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#gallery .gallery_item .overlay__hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(29, 42, 55, 0.8);
+  transition: all 0.3s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+
+#gallery .gallery_item .gallery__zoom {
+  overflow: hidden;
+  position: relative;
+}
+
+#gallery .gallery_item img {
+  display: block;
+  transition: 0.3s ease-in-out;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+#gallery .gallery_item a:hover img {
+  overflow: hidden;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+#gallery .gallery_item .hover-content {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+  padding: 46px 50px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+#gallery .gallery__zoom:hover .overlay__hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+#gallery .gallery_item:hover .hover-content {
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+.dark#myBody .gallery {
+  background-color: #100f19;
+}
 /* ABOUT  */
 .about {
   margin: 80px 0;
