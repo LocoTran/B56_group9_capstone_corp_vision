@@ -22,6 +22,14 @@
 
   <!-- FANCY APP -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+
+  <!-- OWL CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   
 
   <!-- ANIMATE -->
@@ -490,7 +498,104 @@
 
   </section>
 
-  <section class="reviews"></section>
+  <section class="reviews" id="reviews">
+    <div class="reviews__layout py-5">
+      <div class="container py-lg-4 py-md-3 py-2 pb-lg-0">
+  
+        <h5 class="title-small text-center mb-1">Happy Clients Feedback</h5>
+        <h3 class="title-big text-center mb-sm-5 mb-4">Reviews and Testimonials</h3>
+        <!-- /grids -->
+        <div class="reviews__width">
+          <div class="carousel2 owl-carousel owl-theme">
+  
+            <div class="item">
+              <div class="reviews__content">
+                <div class="content">
+                  <blockquote>
+                    <q>Lorem ipsum dolor sit amet elit. Velit beatae laudantium voluptate rem ullam dolore
+                      nisi voluptatibus esse quasi, doloribus tempora.
+                      Dolores molestias adipisci dolo amet!. Lorem ipsum dolor sit amet consectetur
+                      adipisicing elit. Esse architecto est ea sunt eligendi cum?</q>
+                  </blockquote>
+                  <div class="reviews__bottom">
+                    <div class="test-img"><img src="./img/team1.jpg" class="img-fluid" alt="client-img">
+                    </div>
+                    <div class="reviews__text align-self">
+                      <h3>John wilson</h3>
+                      <p class="student">Student</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="reviews__content">
+                <div class="content">
+                  <blockquote>
+                    <q>Lorem ipsum dolor sit amet elit. Velit beatae laudantium
+                      voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                      Dolores molestias adipisci dolo amet!.</q>
+                  </blockquote>
+                  <div class="reviews__bottom">
+                    <div class="test-img"><img src="./img/team2.jpg" class="img-fluid" alt="client-img">
+                    </div>
+                    <div class="reviews__text align-self">
+                      <h3>Julia sakura</h3>
+                      <p class="student">Student</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="reviews__content">
+                <div class="content">
+                  <blockquote>
+                    <q>Lorem ipsum dolor sit amet elit. Velit beatae laudantium
+                      voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                      Dolores molestias adipisci dolo amet!.</q>
+                  </blockquote>
+                  <div class="reviews__bottom">
+                    <div class="test-img"><img src="./img/team3.jpg" class="img-fluid" alt="client-img">
+                    </div>
+                    <div class="reviews__text align-self">
+                      <h3>Roy Linderson</h3>
+                      <p class="student">Student</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="item">
+              <div class="reviews__content">
+                <div class="content">
+                  <blockquote>
+                    <q>Lorem ipsum dolor sit amet elit. Velit beatae laudantium
+                      voluptate rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+                      Dolores molestias adipisci dolo amet!.</q>
+                  </blockquote>
+                  <div class="reviews__bottom">
+                    <div class="test-img"><img src="./img/team4.jpg" class="img-fluid" alt="client-img">
+                    </div>
+                    <div class="reviews__text align-self">
+                      <h3>Smith Johnson</h3>
+                      <p class="student">Student</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+      <!-- /grids -->
+    </div>
+    <!-- //grids -->
+  </section>
 
   <!-- NEWS -->
   <secion class="news">
@@ -591,6 +696,23 @@
   <script>
     Fancybox.bind("[data-fancybox]", {
       // Your custom options
+    });
+  </script>
+
+  <!-- OWL JS  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(document).ready(function () {
+      $(".carousel2").owlCarousel({
+        dots: true,
+        responsive: {
+          0: {
+            items: 1 //số lượng item khi ở màn hình >= 0
+          },
+        }
+      });
     });
   </script>
   
