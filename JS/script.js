@@ -76,7 +76,7 @@ document
 // Nhấn vào phần Page
 var clickPage = 0;
 document.querySelector(".page").addEventListener("click", function () {
-  if (clickPage == 0) {
+  if (clickPage == 0 && window.innerWidth < 992) {
     // kéo dài header để khoảng full dc phần show
     HEAD.style.height = "300px";
     clickPage = 1;
