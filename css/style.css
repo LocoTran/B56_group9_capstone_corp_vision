@@ -1307,13 +1307,11 @@ header #navbarScroll i.fa-search {
   color: white;
 }
 /* subscribe */
-.subscribe {
-  background-image: url(../img/map.png);
-  background-color: #151421;
+.footer #subscribe {
+  background-image: url(../img/bg14.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top: 40px;
 }
 
 #subscribe .bottom-info {
@@ -1462,7 +1460,7 @@ header #navbarScroll i.fa-search {
   opacity: 1;
   display: inline-block;
 }
-#footer .footer__content{
+#footer .footer__content {
   border-bottom: 1px solid rgba(249, 249, 249, 0.1);
 }
 #footer .footer__logo .logo {
