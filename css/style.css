@@ -1462,7 +1462,9 @@ header #navbarScroll i.fa-search {
   opacity: 1;
   display: inline-block;
 }
-
+#footer .footer__content{
+  border-bottom: 1px solid rgba(249, 249, 249, 0.1);
+}
 #footer .footer__logo .logo {
   text-transform: none;
   display: block;
